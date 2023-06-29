@@ -5,6 +5,11 @@ type feedbackConstant = {
   feedbackList: string[];
 };
 
+export const feedbackForm = {
+  title: "How was your class today.",
+  subtitle: "Your honest answer will help to improve your class in the future.",
+};
+
 export const feedbackMood: feedbackConstant[] = [
   {
     title: "Awesome!",
