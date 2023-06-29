@@ -60,18 +60,20 @@ export const FeedbackForm = ({ closeModal }: FeedbackFormProps) => {
           ))}
         </div>
 
-        {selectedMood &&
-          feedbackList[selectedMood].map((feedback) => (
-            <div
-              key={feedback}
-              onClick={() => handleSelectedFeedback(feedback)}
-              className={`flex itesm-center justify-center mt-3`}
-            >
-              <div className="text-white text-left cursor-pointer">
-                {feedback}
+        <div className="justify-center mx-4">
+          {selectedMood &&
+            feedbackList[selectedMood].map((feedback) => (
+              <div
+                key={feedback}
+                onClick={() => handleSelectedFeedback(feedback)}
+                className={`mt-3`}
+              >
+                <div className="text-white cursor-pointer">
+                  <h1>{feedback}</h1>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+        </div>
       </div>
     </div>
   );
