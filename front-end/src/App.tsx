@@ -21,6 +21,16 @@ function App() {
       <PopupModal showModal={showFeedbackModal} modalWidth="w-2/4">
         <FeedbackForm closeModal={() => setShowFeedbackModal(false)} />
       </PopupModal>
+
+      <div className="flex justify-center pt-10">
+        <button
+          type="button"
+          className="bg-black text-white p-2 rounded-md"
+          onClick={() => setShowFeedbackModal(true)}
+        >
+          <h1>open modal</h1>
+        </button>
+      </div>
     </div>
   );
 }
