@@ -17,18 +17,23 @@ export const FeedbackForm = ({ closeModal }: FeedbackFormProps) => {
   };
 
   const handleSelectedFeedback = async (feedback: string) => {
-    fetch(`${config.serviceUrl}/feedback`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        studentEmail: searchParams.get("studentEmail"),
-        feedbackMood: selectedMood,
-        feedbackText: feedback,
-      }),
-    });
+    try {
+      fetch(`${config.serviceUrl}/feedback`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          studentEmail: searchParams.get("studentEmail"),
+          feedbackMood: selectedMood,
+          feedbackText: feedback,
+        }),
+      });
+    } catch (e) {
+      console.log(e);
+    }
 
+    setSelectedMood("");
     closeModal();
   };
 
