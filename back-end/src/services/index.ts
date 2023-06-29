@@ -1,4 +1,4 @@
-import { feedbackData, feedbackMood } from "./index.types";
+import { feedbackData } from "./index.types";
 
 const mockDb: [feedbackData?] = [];
 
