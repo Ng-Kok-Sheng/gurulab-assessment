@@ -1,0 +1,16 @@
+### Create feedback
+POST http://localhost:3000/feedback
+Content-Type: application/json
+
+{
+    "studentEmail": "ngkoksheng1999@gmail.com",
+    "feedbackMood": "awesome",
+    "feedbackText": "I love this app!"
+}
+
+### Get all feedback
+GET http://localhost:3000/feedback
+
+### Get feedback by id
+@feedbackId=7cca7d08-20d2-44b4-9693-788f56c3f97d
+GET http://localhost:3000/feedback/{{feedbackId}}
